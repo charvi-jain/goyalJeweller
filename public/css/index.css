@@ -50,7 +50,7 @@
 	width: 100%;
 	height: 60px;
   left: 0px;
-	background-color: #d4af37;
+	background-color: #efefef;
 }
 
 .f p {
@@ -88,21 +88,21 @@
 
 .head{
   text-align: center;
-  background-color: #f8f8f8;
+
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 20px;
   background-color: #253D5B;
-  border-radius: 100%;
-  align-items: center;
-  margin-left: 530px;
-  width: 300px;
+
+
+  /* margin-left: 530px; */
+
   color: #f8f8f8;
   /* color: #F0E9D2; */
 }
 .foot{
-  padding-top: 10px;
-  padding-bottom: 10px;
+
+
   text-align: center;
   background-color:#253D5B;
   color: #f8f8f8
@@ -119,9 +119,128 @@
 
 }
 #u{
-  padding-top: 100px;
+  padding-top: 20px;
 }
 .text{
   font-size: 30px;
   font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+  width: 100%;
+   height: 100%;
+   margin: 0px;
+   padding: 0px;
+   overflow-x: hidden;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #efefef;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: black;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+  /* padding-top: 20px; */
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: #d4af37;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+
+    top: 0px; */
+    height: 500px;
+    width: 500px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: #d4af37;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 35px;
+    height: 30px;
+    border-top: 2px solid #d4af37;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #efefef;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 90px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: space-around;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+  }
 }
